@@ -6,10 +6,7 @@ import rospy
 import math
 from functools import wraps
 import sys
-# 导入相关库
-from pydobot import Dobot
 
-## 2222
 
 from image_Tag_converter import ImgConverter
 from image_Tag_converter import TagConverter
@@ -224,6 +221,7 @@ def find_box(img,color_name):
             print('正在寻找目标')
 
 #搬箱子
+# 抱箱函数根据箱子的位置信息，机器人会做出相应的动作，如前进、后退、左移、右移等，以便抵达箱子的位置。
 def goto_box():
     global level, ID
     if chest_circle_x is None :
@@ -385,7 +383,7 @@ if __name__ == '__main__':
     time.sleep(0.5)
     ID = 0                      #手中有箱子ID=0，刚抱起ID=1 ID为当前要对正的tag码号码
     step = 1                    #step=1 正向  step=2 反向
-    level = "start_box"         #start为还未抱到箱子，end为已抱起
+    level = "start_box"         #start_box 为还未抱到箱子，end_box 为已抱起
     time.sleep(5)
     while ChestOrg is None:
         print('wite')
@@ -398,7 +396,7 @@ if __name__ == '__main__':
         if ID == 0:  #搬箱子
             if level == "start_box":
                 find_box(Chest_img, 'green')
-                goto_box()                      #218 抱箱函数
+                goto_box()             # 抱箱函数根据箱子的位置信息，机器人会做出相应的动作，如前进、后退、左移、右移等，以便抵达箱子的位置。
                 time.sleep(0.1)
             elif level == "end_box":
                 if step == 1:
