@@ -407,10 +407,10 @@ def turn_to_tag(
         # 靠近标签
         elif x_error > x_threshold + 0.12:
             print("向前靠近标签", x_error, " > ", x_threshold + 0.08)
-            go_fast11(1)
+            box_go(1)
         elif x_error > x_threshold + 0.06:
             print("向前靠近标签", x_error, " > ", x_threshold + 0.06)
-            go_fast1(1)
+            box_go(1)
         else:
             is_turn_done = True
 
@@ -433,7 +433,7 @@ def turn_to_tag(
         # 快速靠近标签
         elif x_error > x_threshold + 0.2:
             print("向前靠近标签", x_error, " > ", x_threshold + 0.12)
-            go_fast2(1)
+            box_go(1)
 
         # 方向平行与标签
         elif theta_error > theta_threshold:
@@ -454,10 +454,10 @@ def turn_to_tag(
         # 靠近标签
         elif x_error > x_threshold + 0.12:
             print("向前靠近标签", x_error, " > ", x_threshold + 0.08)
-            go_fast1(1)
+            box_go(1)
         elif x_error > x_threshold + 0.06:
             print("向前靠近标签", x_error, " > ", x_threshold + 0.06)
-            go_fast(1)
+            box_go(1)
         else:
             is_turn_done = True
 
