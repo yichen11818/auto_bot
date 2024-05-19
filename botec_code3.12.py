@@ -483,15 +483,21 @@ if __name__ == "__main__":
         if ID == 0:  # 搬箱子
             if level == "start_box":
                 find_box(Chest_img, "green")
-                goto_box()  # 抱箱函数根据箱子的位置信息，机器人会做出相应的动作，如前进、后退、左移、右移等，以便抵达箱子的位置。
+                goto_box() # 抱箱函数根据箱子的位置信息，机器人会做出相应的动作，如前进、后退、左移、右移等，以便抵达箱子的位置。
                 time.sleep(0.1)
             elif level == "end_box":
                 if step == 1:
-                    box_go1(4) # 抱起箱子后前进
-                    BoxR_turn2(1)  
+                    print("前进4")
+                    box_go1(4)
+                    # 抱起箱子后前进
+                    """ print("右转1") 
+                    BoxR_turn2(1) 
+                    print("前进1")
                     box_go1(1)
+                    print("前进1")
                     box_go1(1)
-                    BoxR_turn2(1)
+                    print("右转1") 
+                    BoxR_turn2(1) """
                 elif step == 2:
                     BoxR_turn2(3)
                     step = 1
@@ -508,7 +514,7 @@ if __name__ == "__main__":
                     (ID == 1 and level == "start_moving")
                     or ID == 2
                     or ID == 3
-                    or ID == 4
+                    # or ID == 4
                     or (ID == 5 and step == 1)
                 ):
                     print("抱着箱子后退")
@@ -566,8 +572,10 @@ if __name__ == "__main__":
                                 print("三号码对正完毕，右侧移对正四号码")
                                 ID += 1
                                 BoxR_move2(1)
-                                BoxR_move1(2)  # 三号码对正后右移寻找四号码
-                                box_go1(3)  # 右移后前进
+                                BoxR_move1(2) 
+                                print("前进4")# 三号码对正后右移寻找四号码
+                                box_go1(4)
+                                print("前进4")# 右移后前进
                                 box_go1(4)
                         else:
                             print("右移")
@@ -593,7 +601,7 @@ if __name__ == "__main__":
                             )
                             if result == True:
                                 print("五号码对正完毕，前进至大本营并放下海绵块")
-                                box_go1-(3)
+                                box_go1(3)
                                 Box_Down(1)
                                 R_turn2(3)
                                 step = 2
