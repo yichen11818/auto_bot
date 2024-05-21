@@ -488,7 +488,8 @@ if __name__ == "__main__":
             elif level == "end_box":
                 if step == 1:
                     print("前进4")
-                    box_go1(4)
+                    box_go3(1)
+                    box_go1(1)
                     # 抱起箱子后前进
                     """ print("右转1") 
                     BoxR_turn2(1) 
@@ -507,12 +508,14 @@ if __name__ == "__main__":
 
             if len(marker) == 0:  # 机器人未捕捉到tag
                 print("无tag")
-                if ID == 1 and level == "end_box":
+                if ID == 1 and level == "end_box" :
+                    print("右转")
+                    BoxR_turn2(1)
+                elif ID == 1 and level == "start_moving" :
                     print("右转")
                     BoxR_turn2(1)
                 elif (
-                    (ID == 1 and level == "start_moving")
-                    or ID == 2
+                    (ID == 2 and level == "start_moving")
                     or ID == 3
                     # or ID == 4
                     or (ID == 5 and step == 1)
@@ -545,10 +548,13 @@ if __name__ == "__main__":
                             if result == True:
                                 print("一号码对正完毕，前进对正二号码")
                                 ID += 1
-                                box_go1(4)
+                                box_go3(2)
+                                print("test")
+                                box_go1(1)
                         else:  # 一号码对正后前进去寻找二号码
                             print("前进")
-                            box_go1(3)
+                            box_go3(2)
+                            
 
                     elif marker[0] == 2:
                         if ID == 2:
@@ -569,14 +575,14 @@ if __name__ == "__main__":
                                 robot_tag_x, robot_tag_y, tag_yaw, 0.12, 0.11, 0
                             )
                             if result == True:
-                                print("三号码对正完毕，右侧移对正四号码")
+                                print("三号码对正完毕，右侧移对正四号码")# 三号码对正后右移寻找四号码
                                 ID += 1
                                 BoxR_move2(1)
                                 BoxR_move1(2) 
-                                print("前进4")# 三号码对正后右移寻找四号码
-                                box_go1(4)
-                                print("前进4")# 右移后前进
-                                box_go1(4)
+                                print("前进3x3")
+                                box_go3(3)
+                                #print("前进4")# 右移后前进
+                                #box_go3(4)
                         else:
                             print("右移")
                             BoxR_move2(1)
@@ -601,10 +607,18 @@ if __name__ == "__main__":
                             )
                             if result == True:
                                 print("五号码对正完毕，前进至大本营并放下海绵块")
-                                box_go1(3)
+                                print("前进3")
+                                box_go3(1)
+                                print("前进1")
+                                box_go1(1)
                                 Box_Down(1)
+                                print("右转3")
                                 R_turn2(3)
+                                print("右转2")
+                                R_turn2(2)
+                                go_fast2(1)
                                 step = 2
+                                print("step=%s,marker=%s,id=%s" %'step' %'marker[0]' %'ID')
 
                 elif step == 2:
                     # 反方向
@@ -648,9 +662,4 @@ if __name__ == "__main__":
                             ID = 0
                             level = "start_box"
             time.sleep(0.1)
-# 连接乐聚机器人
-device = Dobot(port="COM6")  # 根据实际情况修改端口号
 
-# 获取当前机器人的电量信息
-battery_percentage = device.get_battery_percentage()
-print("当前机器人剩余电量：{}%".format(battery_percentage))
