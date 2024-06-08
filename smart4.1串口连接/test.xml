@@ -1,0 +1,360 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="start" id="!JODDDpDPuBO86x3{r0}" deletable="false" x="-1309" y="-1398">
+    <statement name="do">
+      <block type="1711625419000" id="._o06B.r;;U2f/Vtj7My">
+        <next>
+          <block type="1680753457326" id="k(Q,Rv!j;8IF$FO9Tvgf">
+            <comment pinned="false" h="80" w="160">举高方块</comment>
+            <next>
+              <block type="1711625426824" id="!+9$LtjM{%@F~4Y{@?FK">
+                <next>
+                  <block type="1680745718471" id="A,Fkg3M-g(su:V@!?nCP">
+                    <comment pinned="false" h="80" w="160">63</comment>
+                    <next>
+                      <block type="1711623676666" id="^3@,Z#_^E/o-7^7;2-PJ">
+                        <next>
+                          <block type="1680745688797" id="wW=0N6dusMbMu1q)A-5r">
+                            <comment pinned="false" h="80" w="160">145</comment>
+                            <next>
+                              <block type="1680745916303" id="oo$YNOa{8?~UNzYt%_[)">
+                                <comment pinned="false" h="80" w="160">161 1号码前右转</comment>
+                                <next>
+                                  <block type="1680753648499" id="Ez4+Jl?ayFV5C#-dW@5B">
+                                    <next>
+                                      <block type="1680745722093" id="h4@0MB$5VfN[X)OTvikz">
+                                        <comment pinned="false" h="80" w="160">98</comment>
+                                        <next>
+                                          <block type="1680753423868" id="-eI[*gx!}S4-o3]I.cWa">
+                                            <next>
+                                              <block type="1680745779311" id="?WP]EcKQ0|UpZ#JJaZq8">
+                                                <next>
+                                                  <block type="1680752269543" id="!T=e+[9S|s7M@vFh%8*|">
+                                                    <comment pinned="false" h="80" w="160">67</comment>
+                                                    <next>
+                                                      <block type="1680752272439" id="]@}Ui}4:sH,8SKj:[|[k">
+                                                        <comment pinned="false" h="80" w="160">71</comment>
+                                                        <next>
+                                                          <block type="1680745652860" id="z4n%1Ktp*T^#s]h5yza@">
+                                                            <comment pinned="false" h="80" w="160">57</comment>
+                                                            <next>
+                                                              <block type="1680775114309" id="4w2%i/HsL-o3)g98=u$?">
+                                                                <comment pinned="false" h="80" w="160">45</comment>
+                                                                <next>
+                                                                  <block type="1680745659863" id="E^yW3P,yXY3}I$E)!aCi">
+                                                                    <comment pinned="false" h="80" w="160">111</comment>
+                                                                    <next>
+                                                                      <block type="1711625628610" id="rn9Hut|zka:[bhiL=p$,">
+                                                                        <next>
+                                                                          <block type="1680745753817" id="Jq@,)bPFNW:9JAl6FcsD">
+                                                                            <comment pinned="false" h="80" w="160">137</comment>
+                                                                            <next>
+                                                                              <block type="1680745785946" id="WKQ!%L3}Fr8:;f3boT:j">
+                                                                                <comment pinned="false" h="80" w="160">153</comment>
+                                                                                <next>
+                                                                                  <block type="1680745763411" id="k,du1k~sR8Pv^H=#~7gu">
+                                                                                    <comment pinned="false" h="80" w="160">103</comment>
+                                                                                    <next>
+                                                                                      <block type="1680745769222" id="FRaFkQ=F(v8ISYu?/X[+">
+                                                                                        <comment pinned="false" h="80" w="160">119</comment>
+                                                                                        <next>
+                                                                                          <block type="1680745797902" id="Zpub;NKeDF{5X*w4oH{i">
+                                                                                            <comment pinned="false" h="80" w="160">133</comment>
+                                                                                            <next>
+                                                                                              <block type="1680745801803" id="^9L|9`ekhNmVw/+%maU1">
+                                                                                                <comment pinned="false" h="80" w="160">149</comment>
+                                                                                                <next>
+                                                                                                  <block type="1680745916303" id="UW0NnNm$j^)Z0c:}.tm8">
+                                                                                                    <next>
+                                                                                                      <block type="1717764117843" id="Z^..;N0Qku/4_gpq0`q3">
+                                                                                                        <next>
+                                                                                                          <block type="1680745656786" id="_Iu8AK5pW~Wve?:;a*Jn">
+                                                                                                            <comment pinned="false" h="80" w="160">53</comment>
+                                                                                                            <next>
+                                                                                                              <block type="1711972818322" id="5(6i#C)cAW|N|*TvN]ML">
+                                                                                                                <next>
+                                                                                                                  <block type="1712055986674" id="!`~6L@3obY,C4~%V[S6=">
+                                                                                                                    <next>
+                                                                                                                      <block type="1711881513994" id="81(/wP#x(+*}I%.gA#bN">
+                                                                                                                        <next>
+                                                                                                                          <block type="1717589246973" id="[LpRBAYV@TnU+{dB%VYP">
+                                                                                                                            <next>
+                                                                                                                              <block type="1713613024610" id="H-K/9U=#osZ;z*PiCJyk">
+                                                                                                                                <next>
+                                                                                                                                  <block type="1714630445160" id="rk{|~=28l[i2M9}BErA2">
+                                                                                                                                    <next>
+                                                                                                                                      <block type="1714470307024" id="je:OhHVE3F^R-?${wuYe">
+                                                                                                                                        <next>
+                                                                                                                                          <block type="1714629938406" id="P#jYTJ=T`1ho4kfT%I7(">
+                                                                                                                                            <next>
+                                                                                                                                              <block type="1717593194632" id="Y:r^^1nS4SIOo4#YH]c-">
+                                                                                                                                                <next>
+                                                                                                                                                  <block type="1714629689738" id="|_[@CCjI@Pm0^s]DsIbP">
+                                                                                                                                                    <next>
+                                                                                                                                                      <block type="1714630059898" id="N[34[!H{=lOgb!%E!^-T">
+                                                                                                                                                        <next>
+                                                                                                                                                          <block type="1714630222981" id="*[W2wJL|W~#/F5;34G%v">
+                                                                                                                                                            <next>
+                                                                                                                                                              <block type="1714630378754" id="{d25)BOwuxa2MvZZ[8$|">
+                                                                                                                                                                <next>
+                                                                                                                                                                  <block type="1717588323874" id="~4m|QiS/^s#?U^2tb$y9">
+                                                                                                                                                                    <next>
+                                                                                                                                                                      <block type="1711625610049" id="_DYj(44|W*CaAP39hH:`">
+                                                                                                                                                                        <next>
+                                                                                                                                                                          <block type="1713016492728" id="?i+2}3^}V.GC3^yHduGo">
+                                                                                                                                                                            <next>
+                                                                                                                                                                              <block type="1713613456745" id="asA!,N5Sz=BT;ieP;a^%"></block>
+                                                                                                                                                                            </next>
+                                                                                                                                                                          </block>
+                                                                                                                                                                        </next>
+                                                                                                                                                                      </block>
+                                                                                                                                                                    </next>
+                                                                                                                                                                  </block>
+                                                                                                                                                                </next>
+                                                                                                                                                              </block>
+                                                                                                                                                            </next>
+                                                                                                                                                          </block>
+                                                                                                                                                        </next>
+                                                                                                                                                      </block>
+                                                                                                                                                    </next>
+                                                                                                                                                  </block>
+                                                                                                                                                </next>
+                                                                                                                                              </block>
+                                                                                                                                            </next>
+                                                                                                                                          </block>
+                                                                                                                                        </next>
+                                                                                                                                      </block>
+                                                                                                                                    </next>
+                                                                                                                                  </block>
+                                                                                                                                </next>
+                                                                                                                              </block>
+                                                                                                                            </next>
+                                                                                                                          </block>
+                                                                                                                        </next>
+                                                                                                                      </block>
+                                                                                                                    </next>
+                                                                                                                  </block>
+                                                                                                                </next>
+                                                                                                              </block>
+                                                                                                            </next>
+                                                                                                          </block>
+                                                                                                        </next>
+                                                                                                      </block>
+                                                                                                    </next>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="1710508595220" id="NAg{d(=*HDPUtoIog^T^" x="-299" y="-1258">
+    <next>
+      <block type="1710509334672" id="l/./}eYNk@1W@r9RLnn7">
+        <next>
+          <block type="1683117563331" id="nk~.4cLc4_p~k|pGt0kb">
+            <next>
+              <block type="1680745673175" id="3VI%2,DU^xl1)iaemXq]">
+                <comment pinned="false" h="80" w="160">49</comment>
+                <next>
+                  <block type="1680752248086" id="Re,Az1d[N1f+(c!D0_3M">
+                    <next>
+                      <block type="1680745722093" id="bT.jT.32{fmkn%?~#,ZL">
+                        <comment pinned="false" h="80" w="160">98</comment>
+                        <next>
+                          <block type="1680774576284" id=".lO)_s.e@#h#f%mK}$ir">
+                            <next>
+                              <block type="1680752171445" id="gIv1*LiKtfJ(?}L=05nl">
+                                <next>
+                                  <block type="1683195695963" id="x;ODK!h-hs5!1[HxeR6;">
+                                    <next>
+                                      <block type="1683195104401" id="[J;QL_aVDQb$rB$@3zAp">
+                                        <next>
+                                          <block type="1683195424092" id="~mso76z8mjRXLA(ZAKx@">
+                                            <next>
+                                              <block type="1683195350675" id="-uGV/AWG%;(ha=,c~Umn">
+                                                <next>
+                                                  <block type="1680775618590" id="~A}8nj{?BHBi^;{{Ul/|">
+                                                    <comment pinned="false" h="80" w="160">79</comment>
+                                                    <next>
+                                                      <block type="1683116482760" id="([]jW#76zqu3U0w-%9[;">
+                                                        <next>
+                                                          <block type="1681958963427" id="ty=N,Cn$gO4!p7|v`{/*">
+                                                            <next>
+                                                              <block type="1682991221138" id="{LHgQaM02{0mL,.4J(`_">
+                                                                <next>
+                                                                  <block type="1683117478667" id="Y[G;+3;.3KT((=U,|^SX">
+                                                                    <next>
+                                                                      <block type="1680752266437" id="Rtfu!6jDFw1Z$LS4#U!(">
+                                                                        <comment pinned="false" h="80" w="160">91</comment>
+                                                                        <next>
+                                                                          <block type="1680752275114" id="2n^pm,zdoqmdx,bxaTCN">
+                                                                            <comment pinned="false" h="80" w="160">75</comment>
+                                                                            <next>
+                                                                              <block type="1680745774187" id="jc!M)5/VL^KS)?aK#aud">
+                                                                                <comment pinned="false" h="80" w="160">39 放下方块</comment>
+                                                                                <next>
+                                                                                  <block type="1680753447030" id="u6?(nbk9Nh}M+G|,s0rW">
+                                                                                    <comment pinned="false" h="80" w="160">抢占资源块</comment>
+                                                                                    <next>
+                                                                                      <block type="1680752263368" id="T}S4pE;kdWwdCPCG]pIT">
+                                                                                        <comment pinned="false" h="80" w="160">87  抱箱前进两步</comment>
+                                                                                        <next>
+                                                                                          <block type="1680745704642" id="0YZewk1`(@.j(Zh;(}YZ">
+                                                                                            <comment pinned="false" h="80" w="160">141</comment>
+                                                                                            <next>
+                                                                                              <block type="1680745682571" id="A-uJiGdh#^/!KpqCRS_F">
+                                                                                                <comment pinned="false" h="80" w="160">107</comment>
+                                                                                                <next>
+                                                                                                  <block type="1680745892513" id="|!_kM,3gi,.NZZ2Bo*?e">
+                                                                                                    <comment pinned="false" h="80" w="160">123</comment>
+                                                                                                    <next>
+                                                                                                      <block type="1680745663962" id="(=rp_E/[sa7t-lK#CBVN">
+                                                                                                        <comment pinned="false" h="80" w="160">127</comment>
+                                                                                                        <next>
+                                                                                                          <block type="1680752259809" id="EQ7I21yTFKmtGeXJ)`Au">
+                                                                                                            <comment pinned="false" h="80" w="160">83</comment>
+                                                                                                          </block>
+                                                                                                        </next>
+                                                                                                      </block>
+                                                                                                    </next>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="1711625577269" id="r8D-6GUP7a7~gjrl}bi5" x="167" y="-1196">
+    <next>
+      <block type="1711623676666" id="lad+7q$tDhk;Z),#Xa*,"></block>
+    </next>
+  </block>
+  <block type="1711625501494" id="NUU@Z_)A_zCtpS9}@6Hg" x="-771" y="-1144">
+    <next>
+      <block type="1713017292607" id="e]^crIGLr$1=sZvHLs8X">
+        <next>
+          <block type="1680745711207" id="CwJNnA:Ghl}B/]})lxRh">
+            <comment pinned="false" h="80" w="160">157</comment>
+            <next>
+              <block type="1713440269072" id="x{;l_BZ-_3U%q@71YuGf"></block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="1711625446707" id="fDEA}Mz86LKFts08o5qA" x="-125" y="-1163">
+    <next>
+      <block type="1712058166919" id="Tm:C-RWJUaOjm-].vl)J">
+        <next>
+          <block type="1714468066250" id="nE1P/(;4~ZotIDglkJK["></block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="aelos_for" id="5fB$ZfZrdo4:$+@bBGw]" x="-491" y="-1089">
+    <value name="times">
+      <block type="math_number" id="L1`{#gpO_CXCp:iy@V]r">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+  </block>
+  <block type="1713967046188" id="92xsV{TrF%0^58Q,3gx~" x="-739" y="-1015"></block>
+  <block type="1711625559640" id="PfbxFa.Gi(a%]7V:@q7D" x="-764" y="-938">
+    <next>
+      <block type="1711881358389" id="Z(WyTTwn|z[r,NM#nCaU"></block>
+    </next>
+  </block>
+  <block type="1714141052381" id="DgOmjF/fBZ*x,*2$a;:W" x="-456" y="-916"></block>
+  <block type="1717768058216" id="Ala-*{0qlA2yG#YqE`cz" x="-678" y="-732"></block>
+  <block type="1717768287338" id="n-.Qwi$79`}KC[efOz5;" x="-1042" y="-704"></block>
+  <block type="1713787599503" id="h/ol:FRS(DdhL-m0w?u]" x="-909" y="-656"></block>
+  <block type="1714630655769" id="3owucV1%dh3U4EE3rCUA" x="-793" y="-624"></block>
+  <block type="1717592443469" id="1_4nL1bBAGX,OI1$5f3%" x="-960" y="-580"></block>
+  <block type="1717767976669" id="[j}j#Q8mzg,*Z57}Id1f" x="-783" y="-575"></block>
+  <block type="1714629840116" id="o6)l[,QNOvAzW,FB=GLZ" x="-993" y="-486"></block>
+</xml>
