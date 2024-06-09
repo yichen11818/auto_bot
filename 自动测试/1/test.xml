@@ -1,0 +1,21 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="~C{i#{tp~7TT;8u#$zTx">key</variable>
+  </variables>
+  <block type="start" id="!JODDDpDPuBO86x3{r0}" deletable="false" x="136" y="140">
+    <statement name="do">
+      <block type="aelos_if" id="GJS+N_J:aJ11x}X=*X5[">
+        <statement name="do">
+          <block type="sensor" id="wzGdl0.V}eSG]xS2EDs;">
+            <field name="port">1</field>
+            <value name="variable">
+              <block type="variables_get" id="8)6XpMJEJTkJH}k/]q5(">
+                <field name="VAR" id="~C{i#{tp~7TT;8u#$zTx" variabletype="">key</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>

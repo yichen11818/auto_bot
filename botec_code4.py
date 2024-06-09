@@ -379,7 +379,7 @@ def goto_box():
                 base_action.action("FastForward1s")
                 time.sleep(0.5)
             elif chest_circle_y >= 340:
-                print("后退", chest_circle_y)
+                print("1后退", chest_circle_y)
                 base_action.action("Back1Rungai")
                 time.sleep(0.5)
             else:
@@ -539,7 +539,8 @@ if __name__ == "__main__":
 
     print("启动")
 
-    go_fast3(1)
+    print("1")
+    go_fast2(1)
     
     while not rospy.is_shutdown():
         if ID == 0:  # 搬箱子
@@ -549,7 +550,7 @@ if __name__ == "__main__":
                 time.sleep(0.1)
             elif level == "end_box":
                 if step == 1:
-                    box_go6(1)  # 抱起箱子后前进
+                    box_go7(1)  # 抱起箱子后前进
                     BoxR_turn2(1)
                 elif step == 2:
                     BoxR_turn2(2)
@@ -561,8 +562,8 @@ if __name__ == "__main__":
             if len(marker) == 0:  # 机器人未捕捉到tag
                 print("无tag")
                 if ID == 1 and level == "end_box":
-                    print("前进")
-                    box_go2(1)
+                    print("未找到右转")
+                    BoxR_turn1(1)
                 elif (
                     (ID == 1 and level == "start_moving")
                     or ID == 2
@@ -598,7 +599,7 @@ if __name__ == "__main__":
                             if result == True:
                                 print("一号码对正完毕，前进对正二号码")
                                 ID += 1
-                                box_go7(1)
+                                box_go6(1)
                                 print("前进1")
                         else:  # 一号码对正后前进去寻找二号码
                             print("前进2")

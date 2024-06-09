@@ -2131,3 +2131,276 @@ Blockly.Python['1710762838714'] = function(block) {
   return code;
 }
 
+Blockly.Blocks['io_out'] = {
+  init: function () {
+    this.jsonInit({
+      type: 'io_out',
+      message0: '%{BKY_IO_OUTPUT} %1 %{BKY_IO_OUTPUT_PORT} %2',
+      args0: [
+        {
+          type: 'field_dropdown',
+          name: 'output_value',
+          options: [
+            ['0', '0'],
+            ['1', '1'],
+          ],
+        },
+        {
+          type: 'field_dropdown',
+          name: 'port',
+          options: portOptions,
+        },
+      ],
+      inputsInline: true,
+      previousStatement: null,
+      nextStatement: null,
+      colour: Blockly.Msg.ControlHUE,
+      tooltip: '',
+      helpUrl: '',
+    });
+  }
+};
+
+Blockly.Lua['io_out'] = function(block) {
+  const output = block.getFieldValue("output_value");
+  const port = block.getFieldValue("port");
+
+  return `WriteGpio(${port}, ${output})\n`;
+}
+
+Blockly.Python['io_out'] = function (block) {
+  var code = '';
+  var port = block.getFieldValue('port');
+  var output_value = block.getFieldValue('output_value');
+
+  code = `sensor_port.set_output(${port}, ${output_value})\n`;
+  return code;
+}
+
+Blockly.Blocks['aelos_if_else'] = {
+  init: function () {
+    this.jsonInit({
+      type: 'aelos_if_else',
+      message0: '%{BKY_AELOS_IF} %1 %{BKY_AELOS_DO} %2 %{BKY_AELOS_ELSE} %3',
+      args0: [
+        {
+          type: 'input_value',
+          name: 'condition',
+          check: 'Boolean',
+        },
+        {
+          type: 'input_statement',
+          name: 'if_do',
+        },
+        {
+          type: 'input_statement',
+          name: 'else_do',
+        },
+      ],
+      previousStatement: null,
+      nextStatement: null,
+      colour: '#86C113',
+      toolip: '',
+      helpUrl: '',
+    });
+  }
+};
+
+Blockly.Lua['aelos_if_else'] = function(block) {
+  var condition = Blockly.Lua.valueToCode(block, "condition", Blockly.Lua.ORDER_NONE) || "false";
+  var if_do = Blockly.Lua.statementToCode(block, "if_do");
+  var else_do = Blockly.Lua.statementToCode(block, "else_do");
+
+  var code = `if ${condition} then \n${if_do} \nHKEY()\nelse \n${else_do}\nHKEY()\nend\n`;
+  return code;
+}
+
+Blockly.Python['aelos_if_else'] = function (block) {
+  const condition =
+    Blockly.Python.valueToCode(block, 'condition', Blockly.Python.ORDER_NONE) || 'False';
+  const if_do = Blockly.Python.statementToCode(block, 'if_do') || Blockly.Python.PASS;
+  const else_do = Blockly.Python.statementToCode(block, 'else_do') || Blockly.Python.PASS;
+
+  const code = `if ${condition}:\n${if_do}else:\n${else_do}`;
+  return code;
+}
+
+Blockly.Blocks['geomagnetic_sensor'] = {
+  init: function () {
+    this.jsonInit({
+      type: 'geomagnetic_sensor',
+      message0: '%{BKY_GEOMAGNETIC_SENSOR} %1 %2 ',
+      args0: [
+        {
+          type: 'field_dropdown',
+          name: 'OP',
+          options: [
+            ['=', 'JNE'],
+            ['\u2260', 'JE'],
+            ['<', 'JAE'],
+            ['\u200f\u2265\u200f', 'JA'],
+            ['>', 'JBE'],
+            ['\u200f\u2264\u200f', 'JB'],
+          ],
+        },
+        {
+          type: 'field_number',
+          name: 'number',
+          value: 0,
+          min: 0,
+          max: 360,
+          precision: 1,
+        },
+      ],
+      output: 'Boolean',
+      outputShape: Blockly.OUTPUT_SHAPE_HEXAGONAL,
+      colour: Blockly.Msg.ControlHUE,
+      tooltip: '',
+      helpUrl: '',
+    });
+  }
+};
+
+Blockly.Lua['geomagnetic_sensor'] = function (block) {
+  const number = Number.parseInt(block.getFieldValue('number'), 10);
+  const operation = block.getFieldValue("OP");
+  let code = `ReadGeomagneticSensor() ${operation} ${number}`;
+  return [code, Blockly.Lua.ORDER_NONE];
+}
+
+Blockly.Python['geomagnetic_sensor'] = function (block) {
+  const operation = pythonOpMap[block.getFieldValue('OP')];
+  const number = Number.parseInt(block.getFieldValue('number'), 10);
+  let code = `sensor_port.get_magnet() ${operation} ${number}`;
+  return [code, Blockly.Python.ORDER_NONE];
+}
+
+Blockly.Blocks['sensor'] = {
+  init: function () {
+    this.jsonInit({
+      type: 'sensor',
+      message0: '%{BKY_SENSOR} %1 %{BKY_SENSOR_PORT} %2 %{BKY_SENSOR_VAR} %3',
+      args0: [
+        {
+          type: 'input_dummy',
+        },
+        {
+          type: 'field_dropdown',
+          name: 'port',
+          options: portOptions,
+        },
+        {
+          type: 'input_value',
+          name: 'variable',
+          check: 'Variable',
+        },
+      ],
+      previousStatement: null,
+      nextStatement: null,
+      colour: Blockly.Msg.ControlHUE,
+      toolip: '',
+      helpUrl: '',
+    });
+  }
+};
+
+Blockly.Lua['sensor'] = function(block){
+  const variable = Blockly.Lua.valueToCode(block, "variable", Blockly.JavaScript.ORDER_NONE);
+  const port = block.getFieldValue("port");
+  return `${variable} = ReadGpio(${port})\n`;
+}
+
+Blockly.Python['sensor'] = function (block) {
+  var port = block.getFieldValue('port');
+  var variable = Blockly.Python.valueToCode(block, 'variable', Blockly.Python.ORDER_NONE);
+  var code = '';
+  if (variable) {
+    code = `${variable} = sensor_port.get_gpio(${port})\n`;
+  } else {
+    code = `sensor_port.get_gpio(${port})\n`;
+  }
+
+  return code;
+}
+
+Blockly.Blocks['remote_control_button'] = {
+  init: function () {
+    this.jsonInit({
+      type: 'remote_control_button',
+      message0: '%{BKY_REMOTE_CONTROL_BUTTON_REMOTE}， %1 ，%{BKY_REMOTE_CONTROL_BUTTON_KEY} %2',
+      args0: [
+        { type: 'field_dropdown', name: 'mode', options: remoteControlMode() },
+        { type: 'field_dropdown', name: 'key', options: remoteControlKey },
+      ],
+      output: 'Remote_type',
+      colour: Blockly.Msg.ControlHUE,
+      tooltip: '',
+      helpUrl: '',
+    });
+  }
+};
+
+Blockly.Lua['remote_control_button'] = function(block) {
+  const mode = block.getFieldValue("mode");
+  const key = block.getFieldValue("key");
+  const num = HKEYMap[mode][key];
+  return [num, 0 > num ? Blockly.Lua.ORDER_UNARY : Blockly.Lua.ORDER_ATOMIC];
+}
+
+Blockly.Python['remote_control_button'] = function (block) {
+  const mode = block.getFieldValue('mode');
+  const key = block.getFieldValue('key');
+  const num = HKEYMap[mode][key];
+  return [num, 0 > num ? Blockly.Python.ORDER_UNARY_SIGN : Blockly.Python.ORDER_ATOMIC];
+}
+
+Blockly.Blocks['color_rgbhsv_discrimiation'] = {
+  init: function () {
+    this.jsonInit({
+      type: 'color_rgbhsv_discrimiation',
+      message0:
+        '%1 %{BKY_CAMERA} %{BKY_VISUAL_COLOR_RGBHSV_DISCRI_TITLE_1} %2 %{BKY_VISUAL_COLOR_RGBHSV_DISCRI_TITLE_2} %3 Hmin: %4 ~Hmax: %5 %6 Smin :  %7 ~Smax :  %8 %9 Vmin : %10 ~Vmax: %11',
+      args0: [
+        { type: 'field_dropdown', name: 'camera', options: cameraOptions() },
+        { type: 'input_dummy' },
+        { type: 'input_dummy' },
+        hsvArgs.hmin,
+        hsvArgs.hmax,
+        { type: 'input_dummy' },
+        hsvArgs.smin,
+        hsvArgs.smax,
+        { type: 'input_dummy' },
+        hsvArgs.vmin,
+        hsvArgs.vmax,
+      ],
+      output: 'Boolean',
+      colour: Blockly.Msg.VisualHUE,
+      tooltip: '',
+      helpUrl: '',
+    });
+  }
+};
+
+Blockly.Lua['color_rgbhsv_discrimiation'] = function(block) {
+  const hmin = block.getFieldValue("hmin");
+  const hmax = block.getFieldValue("hmax");
+  const smin = block.getFieldValue("smin");
+  const smax = block.getFieldValue("smax");
+  const vmin = block.getFieldValue("vmin");
+  const vmax = block.getFieldValue("vmax");
+  const code = `IsColourOfHSV(${hmin}, ${hmax}, ${smin}, ${smax}, ${vmin}, ${vmax})`;
+  return [code, Blockly.Lua.ORDER_NONE];
+}
+
+Blockly.Python['color_rgbhsv_discrimiation'] = function (block) {
+  const camera = block.getFieldValue('camera');
+  const hmin = block.getFieldValue('hmin');
+  const hmax = block.getFieldValue('hmax');
+  const smin = block.getFieldValue('smin');
+  const smax = block.getFieldValue('smax');
+  const vmin = block.getFieldValue('vmin');
+  const vmax = block.getFieldValue('vmax');
+  const code = generateHsvCode(HAVE_COLOR, camera, { hmin, hmax, smin, smax, vmin, vmax });
+  return [code, Blockly.Python.ORDER_NONE];
+}
+
