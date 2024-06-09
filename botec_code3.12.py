@@ -548,7 +548,7 @@ if __name__ == "__main__":
                             if result == True:
                                 print("一号码对正完毕，前进对正二号码")
                                 ID += 1
-                                box_go3(2)
+                                box_go3(3)
                                 print("test")
                                 box_go1(1)
                         else:  # 一号码对正后前进去寻找二号码
