@@ -144,23 +144,23 @@ def box_go4(n):  # 抱着箱子前进四步
 
 def box_go6(n):  # 抱着箱子前进六步
     for i in range(0, n):
-        base_action.action("BoxForward6gai")
+        base_action.action("BoxForward6gai1")
         time.sleep(0.5)
 
 
 def box_go7(n):  # 抱着箱子前进七步
     for i in range(0, n):
-        base_action.action("BoxForward8sgai")
+        base_action.action("BoxForward7gai")
         time.sleep(0.5)
 
 def box_go8(n):  # 抱着箱子前进七步
     for i in range(0, n):
-        base_action.action("BoxForward8sgai1")
+        base_action.action("BoxForward8gai1")
         time.sleep(0.5)
         
 def box_go9(n):  # 抱着箱子前进七步
     for i in range(0, n):
-        base_action.action("BoxForward8sgai2")
+        base_action.action("BoxForward9gai")
         time.sleep(0.5)
 
 
@@ -174,7 +174,7 @@ def L_move1(n):  # 左侧移
 
 def L_move2(n):  # 左侧移
     for i in range(0, n):
-        base_action.action("move_left")
+        base_action.action("move_left2")
         time.sleep(0.5)
 
 
@@ -198,7 +198,7 @@ def R_move1(n):  # 右侧移
 
 def R_move2(n):  # 右侧移
     for i in range(0, n):
-        base_action.action("move_right")
+        base_action.action("move_right2")
         time.sleep(0.5)
 
 
@@ -229,7 +229,7 @@ def BoxR_move4(n):  # 右侧移2步
 # 转向#
 def L_turn1(n):  # 左转  左转7°
     for i in range(0, n):
-        base_action.action("turn003L")
+        base_action.action("turnL")
         time.sleep(0.5)
 
 
@@ -253,7 +253,7 @@ def BoxL_turn2(n):  # 左转
 
 def R_turn1(n):  # 右转
     for i in range(0, n):
-        base_action.action("turn003R")
+        base_action.action("turnR")
         time.sleep(0.5)
 
 
@@ -401,7 +401,7 @@ def turn_to_tag(
     theta_offset=0,
     x_threshold=0.03,
     y_threshold=0.02,
-    theta_threshold=6,
+    theta_threshold=5,
 ):
     is_turn_done = False
     check_flag = 0
@@ -538,7 +538,7 @@ if __name__ == "__main__":
         time.sleep(0.1)
 
     print("启动")
-
+    #base_action.action("testright")
     print("1")
     go_fast2(1)
     
@@ -599,7 +599,7 @@ if __name__ == "__main__":
                             if result == True:
                                 print("一号码对正完毕，前进对正二号码")
                                 ID += 1
-                                box_go6(1)
+                                box_go7(1)
                                 print("前进1")
                         else:  # 一号码对正后前进去寻找二号码
                             print("前进2")
@@ -626,7 +626,8 @@ if __name__ == "__main__":
                             if result == True:
                                 print("三号码对正完毕，右侧移对正四号码")
                                 ID += 1
-                                Box3_4(1)  # 三号码对正后右移寻找四号码
+                                BoxR_move2(1)
+                                box_go7(1) # 三号码对正后右移寻找四号码
                                 # 右移后前进
                         else:
                             print(
@@ -682,8 +683,7 @@ if __name__ == "__main__":
                                 print("六号码对正完毕，左侧移对正七号码")
                                 ID += 1
                                 L_move2(4)
-                                go_fast2(4)
-                                go_fast(1)
+                                box_go6(1)
 
                     elif marker[0] == 7:
                         if ID == 7:
