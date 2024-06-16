@@ -144,7 +144,7 @@ def box_go4(n):  # 抱着箱子前进四步
 
 def box_go6(n):  # 抱着箱子前进六步
     for i in range(0, n):
-        base_action.action("BoxForward6gai1")
+        base_action.action("BoxForward6gai2")
         time.sleep(0.5)
 
 
@@ -550,7 +550,7 @@ if __name__ == "__main__":
                 time.sleep(0.1)
             elif level == "end_box":
                 if step == 1:
-                    box_go7(1)  # 抱起箱子后前进
+                    box_go6(1)  # 抱起箱子后前进
                     BoxR_turn2(1)
                 elif step == 2:
                     BoxR_turn2(2)
@@ -594,12 +594,12 @@ if __name__ == "__main__":
                         if ID == 1:
                             level = "start_moving"
                             result = turn_to_tag(
-                                robot_tag_x, robot_tag_y, tag_yaw, 0.08, 0.0, 2
+                                robot_tag_x, robot_tag_y, tag_yaw, 0.08, 0.0, 0
                             )
                             if result == True:
                                 print("一号码对正完毕，前进对正二号码")
                                 ID += 1
-                                box_go7(1)
+                                box_go6(1)
                                 print("前进1")
                         else:  # 一号码对正后前进去寻找二号码
                             print("前进2")
@@ -613,7 +613,7 @@ if __name__ == "__main__":
                             if result == True:
                                 print("二号码对正完毕，右侧移对正三号码")
                                 ID += 1
-                                BoxR_move4(1)
+                                BoxR_move2(2)
                         else:
                             print("右移")  # 二号码对正后右移寻找三号码
                             BoxR_move2(1)
@@ -626,6 +626,7 @@ if __name__ == "__main__":
                             if result == True:
                                 print("三号码对正完毕，右侧移对正四号码")
                                 ID += 1
+                                BoxL_turn1(1)
                                 BoxR_move2(1)
                                 box_go7(1) # 三号码对正后右移寻找四号码
                                 # 右移后前进
@@ -683,7 +684,7 @@ if __name__ == "__main__":
                                 print("六号码对正完毕，左侧移对正七号码")
                                 ID += 1
                                 L_move2(4)
-                                box_go6(1)
+                                box_go7(1)
 
                     elif marker[0] == 7:
                         if ID == 7:
