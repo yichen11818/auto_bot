@@ -35,7 +35,7 @@ color_range = {
 # 放下箱子
 def Box_Down(n):
     for i in range(0, n):
-        base_action.action("Putcub")  # Putcubdowngai
+        base_action.action("Putcub")  # Putcubdownga
         time.sleep(0.5)
 
 
@@ -60,31 +60,29 @@ def Box_pct(n):
 # 后退
 def Box_Back(n):
     for i in range(0, n):
-        base_action.action("Box_backrun1gai2")
+        base_action.action("BoxBack1-1")
         time.sleep(0.5)
 
 
 def Box_Back1(n):
     for i in range(0, n):
-        base_action.action("BoxBack2-1")
+        base_action.action("BoxBack2-3")
         time.sleep(0.5)
 
 
-def Back2(n):
-    for i in range(0, n):
-        base_action.action("Back2Run")
-        time.sleep(0.5)
+
 
 
 def Back1(n):
     for i in range(0, n):
         base_action.action("Back1Run")
         time.sleep(0.5)
-
-def Backgai(n):
+def Back2(n):
     for i in range(0, n):
-        base_action.action("BackRungai1")
+        base_action.action("Back2Run")
         time.sleep(0.5)
+
+
 
 
 # 前进#
@@ -210,19 +208,19 @@ def BoxR_move(n):  # 小幅度右侧移
 
 def BoxR_move1(n):  # 右侧移1步
     for i in range(0, n):
-        base_action.action("Box_move_right1")
+        base_action.action("Box_move_right1gai1")
         time.sleep(1)
 
 
 def BoxR_move2(n):  # 右侧移2步
     for i in range(0, n):
-        base_action.action("Box_move_right2gai4")
+        base_action.action("Box_move_right2gai5")
         time.sleep(1)
 
 
 def BoxR_move4(n):  # 右侧移2步
     for i in range(0, n):
-        base_action.action("Box_move_right4s")
+        base_action.action("Box_move_right4gai1")
         time.sleep(1)
 
 
@@ -380,7 +378,7 @@ def goto_box():
                 time.sleep(0.5)
             elif chest_circle_y >= 340:
                 print("1后退", chest_circle_y)
-                base_action.action("Back1Rungai")
+                base_action.action("BoxBack2-3")
                 time.sleep(0.5)
             else:
                 print("开始抱箱子")
@@ -543,7 +541,7 @@ if __name__ == "__main__":
     go_fast2(1)
     
     while not rospy.is_shutdown():
-        if ID == 0:  # 搬箱子
+        if ID == 0:# 搬箱子
             if level == "start_box":
                 find_box(Chest_img, "green")
                 goto_box()  # 218 抱箱函数
@@ -574,15 +572,15 @@ if __name__ == "__main__":
                     print("抱着箱子后退")
                     Box_Back(1)
                 elif ID == 5 and step == 2 and level == "start_moving":
-                    print("后退")
-                    Backgai(1)
+                    print("大本营右转")
+                    BoxR_turn1(1)
                 elif (
                     (ID == 6)
                     or (ID == 7)
                     or (ID == 5 and step == 2 and level == "reverse_moving")
                 ):
                     print("后退")
-                    Backgai(1)
+                    Box_Back(1)
 
             else:
                 robot_tag_x = marker[1]
@@ -613,7 +611,7 @@ if __name__ == "__main__":
                             if result == True:
                                 print("二号码对正完毕，右侧移对正三号码")
                                 ID += 1
-                                BoxR_move2(2)
+                                BoxR_move4(1)
                         else:
                             print("右移")  # 二号码对正后右移寻找三号码
                             BoxR_move2(1)
@@ -626,7 +624,7 @@ if __name__ == "__main__":
                             if result == True:
                                 print("三号码对正完毕，右侧移对正四号码")
                                 ID += 1
-                                BoxL_turn1(1)
+                                #BoxL_turn1(1)
                                 BoxR_move2(1)
                                 box_go7(1) # 三号码对正后右移寻找四号码
                                 # 右移后前进
@@ -660,7 +658,7 @@ if __name__ == "__main__":
                                 print("五号码对正完毕，前进至大本营并放下海绵块")
                                 box_go3(1)
                                 Box_pct(1)
-                                R_turn1(2)
+                                R_turn1(3)
                                 step = 2  # step设置为2，机器人返回
 
                 elif step == 2:
