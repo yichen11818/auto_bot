@@ -47,7 +47,7 @@ def Box3_4(n):
 
 def Box4_5(n):
     for i in range(0, n):
-        base_action.action("Box_left4_go1s")
+        base_action.action("box4-5")
         time.sleep(0.5)
 
 
@@ -227,7 +227,7 @@ def BoxR_move4(n):  # 右侧移2步
 # 转向#
 def L_turn1(n):  # 左转  左转7°
     for i in range(0, n):
-        base_action.action("turnL")
+        base_action.action("turnL-1")
         time.sleep(0.5)
 
 
@@ -239,7 +239,7 @@ def L_turn2(n):
 
 def BoxL_turn1(n):  # 左转
     for i in range(0, n):
-        base_action.action("BoxTurnL1gai11")
+        base_action.action("BoxturnL")
         time.sleep(1)
 
 
@@ -251,7 +251,7 @@ def BoxL_turn2(n):  # 左转
 
 def R_turn1(n):  # 右转
     for i in range(0, n):
-        base_action.action("turnR")
+        base_action.action("turnR-1")
         time.sleep(0.5)
 
 
@@ -263,7 +263,7 @@ def R_turn2(n):  # 右转
 
 def BoxR_turn(n):  # 右转微调
     for i in range(0, n):
-        base_action.action("BoxTurnR1gai5")
+        base_action.action("BoxturnR")
         time.sleep(1)
 
 
@@ -538,6 +538,7 @@ if __name__ == "__main__":
     print("启动")
     #base_action.action("testright")
     print("1")
+    
     go_fast2(1)
     
     while not rospy.is_shutdown():
@@ -626,7 +627,7 @@ if __name__ == "__main__":
                                 ID += 1
                                 #BoxL_turn1(1)
                                 BoxR_move2(1)
-                                box_go7(1) # 三号码对正后右移寻找四号码
+                                box_go6(1) # 三号码对正后右移寻找四号码
                                 # 右移后前进
                         else:
                             print(
@@ -682,7 +683,7 @@ if __name__ == "__main__":
                                 print("六号码对正完毕，左侧移对正七号码")
                                 ID += 1
                                 L_move2(4)
-                                box_go7(1)
+                                box_go6(1)
 
                     elif marker[0] == 7:
                         if ID == 7:
